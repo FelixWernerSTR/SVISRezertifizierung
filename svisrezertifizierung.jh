@@ -1,0 +1,37 @@
+application {
+  config {
+    baseName SVISRezertifizierung,
+    applicationType monolith,
+    packageName de.svi.svis5g.rezertifizierung,
+    authenticationType session,
+    buildTool maven,
+    clientFramework vue,
+    languages [de, en],
+    nativeLanguage de,
+    databaseType no,
+	serviceDiscoveryType no,
+	clientTheme Lux,
+    clientThemeVariant primary,
+	skipUserManagement	true
+  }
+  entities Rezertifizierung
+}
+
+entity Rezertifizierung {
+
+    loginName String maxlength(100),
+    nachname String maxlength(100),
+    vorname String maxlength(100),
+	vermittlerNummer Integer required,	
+	rollenZugehoerigkeiten TextBlob,
+    dvcVertreterNummer String maxlength(100),
+	dvcBenutzerGruppe String maxlength(100),
+    icisSrGebaude String maxlength(100),
+	icisSrHaftpflicht String maxlength(100),	
+	icisSrLeitungswasser String maxlength(100),   
+	icisSrKfzKasko String maxlength(100)
+	
+}
+
+service Rezertifizierung with serviceClass
+paginate Rezertifizierung with infinite-scroll
