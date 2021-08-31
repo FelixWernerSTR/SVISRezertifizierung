@@ -1,0 +1,34 @@
+{
+  "svisRezertifizierungApp": {
+    "rezertifizierung": {
+      "home": {
+        "title": "Rezertifizierungs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Rezertifizierung",
+        "createOrEditLabel": "Create or edit a Rezertifizierung",
+        "notFound": "No Rezertifizierungs found"
+      },
+      "created": "A new Rezertifizierung is created with identifier {{ param }}",
+      "updated": "A Rezertifizierung is updated with identifier {{ param }}",
+      "deleted": "A Rezertifizierung is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Rezertifizierung {{ id }}?"
+      },
+      "detail": {
+        "title": "Rezertifizierung"
+      },
+      "id": "ID",
+      "loginName": "Login Name",
+      "nachname": "Nachname",
+      "vorname": "Vorname",
+      "vermittlerNummer": "Vermittler Nummer",
+      "rollenZugehoerigkeiten": "Rollen Zugehoerigkeiten",
+      "dvcVertreterNummer": "Dvc Vertreter Nummer",
+      "dvcBenutzerGruppe": "Dvc Benutzer Gruppe",
+      "icisSrGebaude": "Icis Sr Gebaude",
+      "icisSrHaftpflicht": "Icis Sr Haftpflicht",
+      "icisSrLeitungswasser": "Icis Sr Leitungswasser",
+      "icisSrKfzKasko": "Icis Sr Kfz Kasko"
+    }
+  }
+}
