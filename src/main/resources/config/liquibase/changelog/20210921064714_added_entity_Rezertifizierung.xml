@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Rezertifizierung.
+    -->
+    <changeSet id="20210921064714-1" author="jhipster">
+        <createTable tableName="rezertifizierung">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="login_name" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nachname" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="vorname" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="vermittler_nummer" type="integer">
+                <constraints nullable="false" />
+            </column>
+            <column name="rollen_zugehoerigkeiten" type="${clobType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="dvc_vertreter_nummer" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dvc_benutzer_gruppe" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="icis_sr_gebaude" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="icis_sr_haftpflicht" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="icis_sr_leitungswasser" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="icis_sr_kfz_kasko" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            <column name="bestandssicht" type="${clobType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="bemerkung" type="${clobType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="pruefung_erfolgt" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20210921064714-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/rezertifizierung.csv"
+                  separator=";"
+                  tableName="rezertifizierung"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="login_name" type="string"/>
+            <column name="nachname" type="string"/>
+            <column name="vorname" type="string"/>
+            <column name="vermittler_nummer" type="numeric"/>
+            <column name="rollen_zugehoerigkeiten" type="clob"/>
+            <column name="dvc_vertreter_nummer" type="string"/>
+            <column name="dvc_benutzer_gruppe" type="string"/>
+            <column name="icis_sr_gebaude" type="string"/>
+            <column name="icis_sr_haftpflicht" type="string"/>
+            <column name="icis_sr_leitungswasser" type="string"/>
+            <column name="icis_sr_kfz_kasko" type="string"/>
+            <column name="bestandssicht" type="clob"/>
+            <column name="bemerkung" type="clob"/>
+            <column name="pruefung_erfolgt" type="boolean"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>
