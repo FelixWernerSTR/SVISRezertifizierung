@@ -33,7 +33,7 @@ tmp/**/*
 *.swp
 *~.nib
 local.properties
-#.classpath
+.classpath
 .settings/
 .loadpath
 .factorypath
@@ -69,7 +69,12 @@ out/
 ######################
 # Visual Studio Code
 ######################
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
 
 ######################
 # Maven
@@ -146,5 +151,9 @@ Desktop.ini
 # ESLint
 ######################
 .eslintcache
-/.sonatype
-/set-env.cmd
+
+######################
+# Code coverage
+######################
+/coverage/
+/.nyc_output/
