@@ -1,0 +1,28 @@
+{
+  "passwordSafeUiApp": {
+    "entry": {
+      "home": {
+        "title": "Entries",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Entry erstellen",
+        "createOrEditLabel": "Entry erstellen oder bearbeiten",
+        "notFound": "Keine Entries gefunden"
+      },
+      "created": "Entry erstellt mit ID {{ param }}",
+      "updated": "Entry aktualisiert mit ID {{ param }}",
+      "deleted": "Entry gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Entry {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Entry"
+      },
+      "id": "ID",
+      "description": "Description",
+      "login": "Login",
+      "passwort": "Passwort",
+      "passwortReplay": "Passwort Replay",
+      "group": "Group"
+    }
+  }
+}
