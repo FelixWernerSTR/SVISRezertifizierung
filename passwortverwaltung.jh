@@ -1,0 +1,71 @@
+application {
+  config {
+    baseName PasswordSafeUI,
+    applicationType gateway,
+    packageName de.fw.passwordsafe,
+    authenticationType session,
+    buildTool maven,
+    clientFramework vue,
+    languages [de, en],
+    nativeLanguage de,
+	serviceDiscoveryType no,
+	clientTheme Lux,
+    clientThemeVariant primary,
+    prodDatabaseType postgresql,
+    skipServer false
+	//searchEngine elasticsearch,
+	//testFrameworks [gatling,cucumber,protractor]
+  }
+  entities Entry, Group
+}
+
+application {
+  config {
+    baseName PasswordSafe,
+    applicationType microservice,
+    packageName de.fw.passwordsafe,
+    buildTool maven,
+	devDatabaseType h2Disk,
+	serviceDiscoveryType no,
+    skipUserManagement	true,
+    prodDatabaseType postgresql
+  }
+  entities Entry, Group
+}
+
+entity Entry {
+    description String maxlength(250),
+    login String required maxlength(250),
+    passwort String required maxlength(250),
+    passwortReplay String required maxlength(250)
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Group {
+  name String required maxlength(250),
+  description String required maxlength(250),
+}
+
+
+relationship ManyToOne {
+  Entry{group(name)} to Group
+}
+
+
+// Set pagination options
+paginate Group with infinite-scroll
+paginate Entry with pagination
+
+
+// Use Data Transfer Objects (DTO)
+//dto * with mapstruct
+
+// Set service options to all except few
+//service all with serviceImpl
+service all with serviceClass
+
+//search Entry with elasticsearch
+
+//search Group with elasticsearch
+
