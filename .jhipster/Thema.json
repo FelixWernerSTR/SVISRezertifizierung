@@ -1,0 +1,43 @@
+{
+  "applications": ["SVISAktuelles"],
+  "changelogDate": "20220412101237",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "thema",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "fieldName": "rechte",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "30"
+    },
+    {
+      "fieldName": "displaycount",
+      "fieldType": "Long",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "999",
+      "fieldValidateRulesMin": "0"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Thema",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "thementyp",
+      "otherEntityRelationshipName": "thema",
+      "relationshipName": "thementyp",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

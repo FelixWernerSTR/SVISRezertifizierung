@@ -1,0 +1,22 @@
+{
+  "applications": ["SVISAktuelles"],
+  "changelogDate": "20220412101137",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "thementyp",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Thementyp",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

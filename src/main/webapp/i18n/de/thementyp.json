@@ -1,0 +1,24 @@
+{
+  "svisAktuellesApp": {
+    "thementyp": {
+      "home": {
+        "title": "Thementyps",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Thementyp erstellen",
+        "createOrEditLabel": "Thementyp erstellen oder bearbeiten",
+        "notFound": "Keine Thementyps gefunden"
+      },
+      "created": "Thementyp erstellt mit ID {{ param }}",
+      "updated": "Thementyp aktualisiert mit ID {{ param }}",
+      "deleted": "Thementyp gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Thementyp {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Thementyp"
+      },
+      "id": "ID",
+      "name": "Name"
+    }
+  }
+}
