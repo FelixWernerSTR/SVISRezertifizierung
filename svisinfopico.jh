@@ -1,0 +1,100 @@
+application {
+  config {
+    baseName SVISInfo,
+    applicationType monolith,
+    packageName de.svi.svis5g.aktuelles,
+    authenticationType session,
+    buildTool maven,
+    clientFramework vue,
+    languages [de, en],
+    nativeLanguage de,
+	devDatabaseType h2Memory,
+	serviceDiscoveryType no,
+	clientTheme Cerulean,
+    clientThemeVariant primary,
+    prodDatabaseType oracle,
+    //searchEngine elasticsearch,
+	//cacheProvider hazelcast, 
+	//testFrameworks [gatling,cucumber,protractor]
+  }
+  entities Thementyp, Thema, Beitrag
+}
+
+enum Archiv {
+  JA (Ja),
+  NEIN (Nein)
+}
+
+enum Rechte {
+  INN(INN),
+  AUS(AUS),
+  SPK(SPK),
+  OSP(OSP)
+}
+
+entity Thementyp {
+	//THT_ID NUMBER(10,0),
+	//THT_THEMENTYP VARCHAR2(30),
+	name String required maxlength(50)
+    //Aktuelles, Dokument, Download, Link
+}
+
+entity Thema {
+    //THE_ID NUMBER(10,0),
+	//THE_NAME VARCHAR2(25),
+    name String required maxlength(50),
+	//THE_RIGHT VARCHAR2(30),
+    rechte String maxlength(30),
+	//THE_THT_FK NUMBER(10,0),
+    //thementyp Thementyp,
+	//THE_DISPLAYCOUNT NUMBER(3,0),
+    displaycount Long min(0) max(999) 
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Beitrag {
+    //BEI_ID NUMBER(10,0),
+	//BEI_THE_FK NUMBER(10,0),
+    //thema Thema,
+	//BEI_CONTENT CLOB,
+    content TextBlob,
+	//BEI_ATTRIB VARCHAR2(200),
+    attrib String maxlength(200),
+	//BEI_TITEL VARCHAR2(70),
+    titel String maxlength(70),
+	//BEI_RIGHT VARCHAR2(30),
+    rechte String maxlength(30),
+	//BEI_VALID_FROM DATE,
+    validFrom LocalDate,
+	//BEI_VALID_TO DATE,
+    validTo LocalDate,
+	//BEI_PUBLISH_DATE DATE,
+    publishDate LocalDate,
+	//BEI_ARCHIV NUMBER(1,0) DEFAULT 0
+    //archiv Integer min(0) max(9)
+    archiv Archiv
+}
+
+relationship ManyToOne {
+	Thema{thementyp(name)} to Thementyp
+}
+
+relationship ManyToOne {
+	Beitrag{thema(name)} to Thema
+}
+
+
+// Set pagination options
+paginate Thema with infinite-scroll
+paginate Beitrag with pagination
+
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceClass
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
