@@ -1,0 +1,65 @@
+{
+  "applications": ["SVISAktuelles"],
+  "changelogDate": "20220412101337",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "beitrag",
+  "fields": [
+    {
+      "fieldName": "content",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "attrib",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "titel",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "70"
+    },
+    {
+      "fieldName": "rechte",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "30"
+    },
+    {
+      "fieldName": "validFrom",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "validTo",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "publishDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "archiv",
+      "fieldType": "Archiv",
+      "fieldValues": "JA (Ja),NEIN (Nein)"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "not an ignored comment",
+  "jpaMetamodelFiltering": false,
+  "name": "Beitrag",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "thema",
+      "otherEntityRelationshipName": "beitrag",
+      "relationshipName": "thema",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

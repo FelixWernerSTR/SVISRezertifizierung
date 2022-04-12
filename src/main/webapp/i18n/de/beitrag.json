@@ -1,0 +1,32 @@
+{
+  "svisAktuellesApp": {
+    "beitrag": {
+      "home": {
+        "title": "Beitrags",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Beitrag erstellen",
+        "createOrEditLabel": "Beitrag erstellen oder bearbeiten",
+        "notFound": "Keine Beitrags gefunden"
+      },
+      "created": "Beitrag erstellt mit ID {{ param }}",
+      "updated": "Beitrag aktualisiert mit ID {{ param }}",
+      "deleted": "Beitrag gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Beitrag {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Beitrag"
+      },
+      "id": "ID",
+      "content": "Content",
+      "attrib": "Attrib",
+      "titel": "Titel",
+      "rechte": "Rechte",
+      "validFrom": "Valid From",
+      "validTo": "Valid To",
+      "publishDate": "Publish Date",
+      "archiv": "Archiv",
+      "thema": "Thema"
+    }
+  }
+}

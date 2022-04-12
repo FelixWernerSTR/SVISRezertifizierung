@@ -1,0 +1,27 @@
+{
+  "svisAktuellesApp": {
+    "thema": {
+      "home": {
+        "title": "Themas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Thema",
+        "createOrEditLabel": "Create or edit a Thema",
+        "notFound": "No Themas found"
+      },
+      "created": "A new Thema is created with identifier {{ param }}",
+      "updated": "A Thema is updated with identifier {{ param }}",
+      "deleted": "A Thema is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Thema {{ id }}?"
+      },
+      "detail": {
+        "title": "Thema"
+      },
+      "id": "ID",
+      "name": "Name",
+      "rechte": "Rechte",
+      "displaycount": "Displaycount",
+      "thementyp": "Thementyp"
+    }
+  }
+}

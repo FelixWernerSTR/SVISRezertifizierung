@@ -1,0 +1,24 @@
+{
+  "svisAktuellesApp": {
+    "thementyp": {
+      "home": {
+        "title": "Thementyps",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Thementyp",
+        "createOrEditLabel": "Create or edit a Thementyp",
+        "notFound": "No Thementyps found"
+      },
+      "created": "A new Thementyp is created with identifier {{ param }}",
+      "updated": "A Thementyp is updated with identifier {{ param }}",
+      "deleted": "A Thementyp is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Thementyp {{ id }}?"
+      },
+      "detail": {
+        "title": "Thementyp"
+      },
+      "id": "ID",
+      "name": "Name"
+    }
+  }
+}

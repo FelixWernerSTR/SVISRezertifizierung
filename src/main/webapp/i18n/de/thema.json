@@ -1,0 +1,27 @@
+{
+  "svisAktuellesApp": {
+    "thema": {
+      "home": {
+        "title": "Themas",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Thema erstellen",
+        "createOrEditLabel": "Thema erstellen oder bearbeiten",
+        "notFound": "Keine Themas gefunden"
+      },
+      "created": "Thema erstellt mit ID {{ param }}",
+      "updated": "Thema aktualisiert mit ID {{ param }}",
+      "deleted": "Thema gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Thema {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Thema"
+      },
+      "id": "ID",
+      "name": "Name",
+      "rechte": "Rechte",
+      "displaycount": "Displaycount",
+      "thementyp": "Thementyp"
+    }
+  }
+}
